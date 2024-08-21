@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  mindspore:
+    image: mindspore/mindspore-cpu:1.10.1
+    container_name: mindspore
+    volumes:
+      - ./notebooks:/notebooks
+  
