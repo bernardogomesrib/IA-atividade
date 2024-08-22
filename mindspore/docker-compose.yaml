@@ -1,8 +1,41 @@
-version: '3.8'
-services:
-  mindspore:
-    image: mindspore/mindspore-cpu:1.10.1
-    container_name: mindspore
-    volumes:
-      - ./notebooks:/notebooks
-  
+# na verdade é só como fazer o uso da imagem docker este arquivo.
+# primeiro é preciso fazer o pull da imagem:
+
+#    docker pull mindspore/mindspore-cpu:1.10.1
+
+# depois é necessário rodar o container:
+
+# docker run -it mindspore/mindspore-cpu:1.10.1 /bin/bash
+
+# caso já tenha feito isso uma vez, basta rodar o comando:
+
+# docker start -i <container_id> /bin/bash
+
+# e para encontrar o id do container basta rodar o comando:
+
+# docker ps -a
+
+# e procurar o container que está rodando a imagem mindspore/mindspore-cpu:1.10.1
+# e copiar o id dele.
+# depois de rodar o container, basta rodar o comando:
+
+# docker exec -it <container_id> /bin/bash
+
+# caso tenha mais de um container rodando a imagem mindspore/mindspore-cpu:1.10.1 e queira apagar um deles, basta rodar o comando:
+# docker rm <container_id>
+
+# e pronto, você estará dentro do container com a imagem mindspore/mindspore-cpu:1.10.1
+# para enviar arquivos para o container, basta rodar o comando:
+
+# docker cp <arquivo> <container_id>:<caminho_dentro_do_container>
+
+# e para enviar arquivos do container para o host, basta rodar o comando:
+
+# docker cp <container_id>:<arquivo> <caminho_no_host>
+
+# para sair do container, basta rodar o comando:
+
+# exit
+
+# um exemplo de enviar uma pasta/arquivo para o container na pasta root do container:
+# docker cp /home/user/Downloads/ db8a:/root/
