@@ -10,7 +10,8 @@
 # caso já tenha feito isso uma vez, basta rodar o comando:
 
 # docker start -i <container_id> /bin/bash
-
+#exemplo iniciando o docker no terminal
+# docker start -i d60fab9b2ee7dfa0080745075ec59f14ff9124877f33a36aeb33f3d4f4a3971e /bin/bash
 # e para encontrar o id do container basta rodar o comando:
 
 # docker ps -a
@@ -38,4 +39,7 @@
 # exit
 
 # um exemplo de enviar uma pasta/arquivo para o container na pasta root do container:
-# docker cp /home/user/Downloads/ db8a:/root/
+# docker cp /home/user/Downloads/ d60f:/root/
+
+
+#exemplo entrando no docker
